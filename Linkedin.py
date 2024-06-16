@@ -13,8 +13,8 @@ from Database_Handling import DataBase
 
 
 
-LINKEDIN_USERNAME = 'ayush.snh@iitg.ac.in'
-LINKEDIN_PASSWORD = 'Ashu@2004'
+LINKEDIN_USERNAME = 'your_username'
+LINKEDIN_PASSWORD = 'your_password'
 
 
 def login_to_linkedin(driver, username, password):

@@ -9,8 +9,8 @@ class DataBase:
         self.db = mysql.connector.connect(
             host="localhost",
             user="root",
-            password="ashu2004",
-            database="testdata"
+            password="your_password",
+            database="your_database"
         )
         self.mycursor = self.db.cursor()
 
