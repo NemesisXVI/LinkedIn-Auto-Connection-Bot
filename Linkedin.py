@@ -10,11 +10,17 @@ import csv
 import mysql.connector
 from prettytable import PrettyTable
 from Database_Handling import DataBase
+from configparser import ConfigParser
 
 
 
-LINKEDIN_USERNAME = 'your_username'
-LINKEDIN_PASSWORD = 'your_password'
+
+#Setting up Config file
+file = 'config.ini'
+config = ConfigParser()
+config.read(file)
+LINKEDIN_USERNAME = config['LinkedIn Credentials']['LINKEDIN_USERNAME']
+LINKEDIN_PASSWORD = config['LinkedIn Credentials']['LINKEDIN_PASSWORD']
 
 
 def login_to_linkedin(driver, username, password):
@@ -40,7 +46,8 @@ def login_to_linkedin(driver, username, password):
 
 
 def Send_Request(driver, link):
-    """Searches for clipboard content and clicks the first result link."""
+    """Searches for clipboard content and clicks the first result link.
+    Returns connection_request status and name of linkedin user"""
 
 
     driver.get(link)

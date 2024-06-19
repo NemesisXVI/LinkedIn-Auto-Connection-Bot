@@ -1,19 +1,26 @@
 import mysql.connector
 from prettytable import PrettyTable
+from configparser import ConfigParser
 
 
+#Setting up Config file
+file = 'config.ini'
+config = ConfigParser()
+config.read(file)
 
 
 class DataBase:
     def __init__(self):
         self.db = mysql.connector.connect(
-            host="localhost",
-            user="root",
-            password="your_password",
-            database="your_database"
+            host=config['MySQL Credentials']['MYSQL_HOST'],
+            user=config['MySQL Credentials']['MYSQL_USER'],
+            password=config['MySQL Credentials']['MYSQL_PASSWORD'],
+            database=config['MySQL Credentials']['MYSQL_DATABASE']
         )
         self.mycursor = self.db.cursor()
-
+    def Create_Table(self):
+        create_table_query = f"CREATE TABLE profile (Name Varchar(50),Position Varchar(500),LinkedIN_ID Varchar(500),Phone_no int,Email_ID varchar(200),Connection_Request varchar(50),Primary Key(LinkedIN_ID))"
+        self.mycursor.execute(create_table_query)
 
     def Describe(self,describe=False):
       self.mycursor.execute("Describe profile")
@@ -41,11 +48,8 @@ class DataBase:
 
 if __name__=="__main__":
     db_obj = DataBase()
+    db_obj.Create_Table()
     db_obj.Describe(describe=True)
-    # db_obj.Show_Content()
-  #   db_obj.mycursor.execute("INSERT INTO profile VALUES ('abc','Marketing Manager','abc.linkedin',87819,'abc.xyz@gmail','Sent')")
-  #   db_obj.db.commit()
-  # mycursor.execute("delete from profile")
     db_obj.Show_Content()
 
 
