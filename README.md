@@ -37,6 +37,11 @@ cd linkedin-auto-connect-bot
 ```bash
 pip install -r requirements.txt
 ```
+3. Install ChromeDriver for Selenium:
+
+ChromeDriver : https://sites.google.com/chromium.org/driver/
+
+Documentation: https://selenium-python.readthedocs.io/installation.html#drivers
 
 ## Usage:
 ### 1. Update your information in config.ini :
