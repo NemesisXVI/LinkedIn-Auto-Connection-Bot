@@ -7,17 +7,17 @@ The bot performs the following tasks:
 1. **Scrapes** marketing LinkedIn profiles from Chrome using **BeautifulSoup**.
 2. Stores the scraped profile links in a CSV file.
 3. Uses **Selenium** to log into LinkedIn on Chrome.
-4. Iterates over the links in the CSV file, sends connection requests, and extracts the name of the person.
-5. Updates the connection details into a **MySQL** database using **mysql-connector-python**.
+4. Iterates over the links in the CSV file sending connection request to each of them along-with extracting their name.
+5. Updates the Connection details into a **MySQL** database using **mysql-connector-python**.
 
 ## Motivation
-I am a **marketing** executive for North-East India's largest annual techno-management fest **Techniche** conducted solely by the student body of **Indian Institute of Technology Guwahati**.
-As a fresher one of my first tasks was to conduct profiling and listing of various companies from a particular sector which would be our potential monetary partners.
+I am a **Marketing Executive** for North-East India's largest annual techno-management fest **Techniche** conducted solely by the student body of **Indian Institute of Technology Guwahati**.
+As a fresher in Techniche one of my first tasks was to conduct profiling and listing of various companies from a particular sector that could be our potential financial partners for the event.
 
-This involves hours of scouring through LinkedIn and sending connection requests to marketing personelle of targeted companies. To aid me in my pursuit of profiling, through this tedious and mundane journey I decided to automate the process using 
-web scraping, web automation and database management.
+This involved hours of scouring through LinkedIn and sending connection requests to marketing personnel of targeted companies. During this tedious and mundane journey of profiling, I decided to automate the process using 
+web scraping, web automation and database management to aid me in my pursuit.
 
-I used DBMS instead of excel sheets to create a concrete database of profiles that can be used by upcoming freshers as well and also to keep a centralized place for storing relevant profiles.
+I used DBMS instead of excel sheets to create a concrete database of profiles that can be used by upcoming freshers as well and also to keep a centralized directory for storing relevant profiles for utilizing in other Institute events too.
 ## Prerequisites
 
 Before you begin, ensure you have met the following requirements:
