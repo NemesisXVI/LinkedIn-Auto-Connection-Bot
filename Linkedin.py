@@ -121,7 +121,7 @@ def wait_for_browser_close(driver):
 def Iterate_CSV(driver,db_obj):
     try:
 
-        with open('search_results.csv', mode='r', newline='') as file:
+        with open(f"{config['CSV Handling']['NAME_CSV_to_use']}", mode='r', newline='') as file:
             # Create a CSV reader object
             csv_reader = csv.reader(file)
 

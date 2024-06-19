@@ -44,9 +44,9 @@ for _ in range(MAX_SCROLLS):
 
 # Save the links to a CSV file
 df = pd.DataFrame(links, columns=['Link'])
-df.to_csv('search_results3.csv', index=False)
+df.to_csv(f"{config['CSV Handling']['NAME_CSV_to_store']}", index=False)
 
-print(f'{len(links)} links saved to search_results.csv')
+print(f"{len(links)} links saved to {config['CSV Handling']['NAME_CSV_to_store']}")
 
 # Close the WebDriver
 driver.quit()
