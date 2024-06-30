@@ -46,8 +46,8 @@ def login_to_linkedin(driver, username, password):
 
 
 def Send_Request(driver, link):
-    """Searches for clipboard content and clicks the first result link.
-    Returns connection_request status and name of linkedin user"""
+    """Clicking on connect button and then send request without note button,
+    If connect button not available then clicking more button, then connect and then send request without note button for each link."""
 
 
     driver.get(link)
